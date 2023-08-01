@@ -27,6 +27,7 @@ const [page, setPage]=useState(1)
     }, [page])
     return <div>
         <Pagination page={page} setPage={setPage}></Pagination>
-        <Gallery characters={characters}/>   
+        <Gallery characters={characters}/>
+         
         </div>
 }
