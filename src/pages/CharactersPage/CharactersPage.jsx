@@ -9,11 +9,12 @@ export default function CharactersPage(){
 
 const [characters, setCharacters] = useState([]);
 
+const [page, setPage]=useState(1)
                 
     useEffect(()=> {
         async function getCharacters (){
         try {
-             const {data} = await axios ("https://rickandmortyapi.com/api/character")
+             const {data} = await axios (`https://rickandmortyapi.com/api/character?page=${page}`)
                 // console.log(data.results)
                 setCharacters(data.results)
 
@@ -23,9 +24,9 @@ const [characters, setCharacters] = useState([]);
             
         }
         getCharacters()
-    }, [])
+    }, [page])
     return <div>
-        <Pagination></Pagination>
+        <Pagination page={page} setPage={setPage}></Pagination>
         <Gallery characters={characters}/>   
         </div>
 }
