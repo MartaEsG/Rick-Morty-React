@@ -4,7 +4,6 @@ import { useState } from "react";
 import Gallery from "../../Gallery/Gallery";
 import Pagination from "../../Pagination/Pagination";
 
-
 export default function CharactersPage(){
 
 const [characters, setCharacters] = useState([]);
