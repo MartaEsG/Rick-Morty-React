@@ -1,5 +1,5 @@
 export default function HomePage(){
     return <div>
-        Soy home
+        Bienvenido!
         </div>
 }
